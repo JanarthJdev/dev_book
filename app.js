@@ -4,6 +4,8 @@ const healthRoutes = require("./routes/health.routes");
 const loggerMiddleware = require("./middlewares/logger.middleware");
 const userRoutes = require("./routes/user.routes");
 const profileRoutes = require("./routes/profile.routes");
+const postRoutes = require("./routes/post.routes");
+
 const connectDB = require("./config/db.config");
 const app = express();
 
@@ -16,6 +18,7 @@ connectDB();
 app.use("/api/health", healthRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/profile", profileRoutes);
+app.use("/api/posts", postRoutes);
 
 // 404 Route Handler
 app.use((req, res, next) => {

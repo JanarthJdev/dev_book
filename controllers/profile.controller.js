@@ -38,6 +38,7 @@ const upsertProfile = async (req, res) => {
 
 // @desc   Get profile by user ID
 // @route  GET /api/profile/:userId
+// @params userid - path variable
 // @access Public
 const getProfileByUserId = async (req, res) => {
   try {
